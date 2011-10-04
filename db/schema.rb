@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100427161133) do
+ActiveRecord::Schema.define(:version => 20111004142931) do
 
   create_table "events", :force => true do |t|
     t.integer  "page_id"
@@ -51,14 +51,10 @@ ActiveRecord::Schema.define(:version => 20100427161133) do
     t.string   "title"
     t.text     "body"
     t.datetime "created_at"
-    t.string   "content_type", :limit => 100
-    t.string   "filename"
-    t.string   "path"
-    t.integer  "parent_id"
-    t.string   "thumbnail"
-    t.integer  "size"
-    t.integer  "width"
-    t.integer  "height"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "roles", :force => true do |t|

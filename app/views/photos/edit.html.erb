@@ -1,11 +1,15 @@
 <h1>Editing photo</h1>
 
-<% form_for(@photo) do |f| %>
+<% form_for(:photo,
+            :url => photo_url(@photo), 
+            :html => { :multipart => true, :method => :put }) do |f| -%>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+    <p>Edit photo details</p>
+    <p>Title:<br /><%= f.text_field 'title' %></p>
+    <p>Exiting Photo:<br /><%= image_tag @photo.photo.url(:medium) %></p>
+    <p>Photo:<br /><%= f.file_field :photo %></p>
+    <p><%= f.submit 'Update' %></p>
 <% end %>
 
 <%= link_to 'Show', @photo %> |

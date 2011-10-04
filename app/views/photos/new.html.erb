@@ -7,7 +7,7 @@
              :html => { :multipart => true }) do |f| %>
   <p>Select a photo to upload</p>
   <p>Title:<br /><%= f.text_field 'title' %></p>
-  <p>Photo:<br /><%= f.file_field 'uploaded_data' %></p>
+  <p>Photo:<br /><%= f.file_field :photo %></p>
   <p>
     <%= submit_tag 'Upload Photo' %> or <%= link_to 'cancel', admin_photos_path %>
   </p>

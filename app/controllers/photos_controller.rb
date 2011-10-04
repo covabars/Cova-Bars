@@ -2,21 +2,13 @@ class PhotosController < ApplicationController
 
   def admin
     @photos = Photo.find(:all,
-                         :conditions => "thumbnail is NULL",
                          :order => 'created_at DESC')
   end
 
   def index
-    #photos_count = Photo.count(:conditions => "thumbnail = 'thumb'")
-    photos_count = Photo.count(:conditions => "thumbnail is NULL")
+    photos_count = Photo.count()
     @photo_pages = Paginator.new(self, photos_count, 10, params[:page])
- #   @photos = Photo.find(:all,
- #                        :conditions => "thumbnail = 'thumb'",
- #                        :order => 'created_at DESC',
- #                        :limit => @photo_pages.items_per_page,
- #                        :offset => @photo_pages.current.offset)
     @photos = Photo.find(:all,
-                         :conditions => "thumbnail is NULL",
                          :order => 'created_at DESC',
                          :limit => @photo_pages.items_per_page,
                          :offset => @photo_pages.current.offset)

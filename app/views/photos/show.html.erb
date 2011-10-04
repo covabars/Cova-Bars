@@ -1,3 +1,5 @@
 
+<%= image_tag @photo.photo.url(:medium) %>
+
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
