@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
                             :limit => 3,
                             :order => 'event_date ASC',
                             :conditions => "event_date >= DATE(NOW())")
-
+    STDERR.puts "FUUUUCCCCCCKKKKKKKK -> #{RAILS_ENV}"
     if (RAILS_ENV == :production)
       @rcphoto = Photo.find(:first, :order => 'random()')
     else
