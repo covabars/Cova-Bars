@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111004142931) do
+ActiveRecord::Schema.define(:version => 20111004160024) do
 
   create_table "events", :force => true do |t|
     t.integer  "page_id"

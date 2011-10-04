@@ -17912,3 +17912,476 @@ Rendering sports/index
 Rendered layouts/_menu (9.6ms)
 Rendered layouts/_footer (1.4ms)
 Completed in 39ms (View: 28, DB: 8) | 200 OK [http://localhost/sports]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100302131957)
+Migrating to CreateUsers (20100302151225)
+Migrating to CreateRoles (20100302165239)
+Migrating to CreateRolesUsersJoin (20100302165455)
+Migrating to CreateEvents (20100303171019)
+Migrating to CreateFoods (20100309174234)
+Migrating to CreateSports (20100324131814)
+Migrating to CreatePhotos (20100427161133)
+Migrating to UpdatePhotos (20111004131957)
+Migrating to PaperclipPhotos (20111004142931)
+Migrating to Content (20111004154519)
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.4ms)[0m   [0;1mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('fintlewoodle', '2011-10-04 14:51:42', NULL, 'FintleWoodle', 'content to follow', NULL, '2011-10-04 14:51:42', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (38.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('wheetabls', '2011-10-04 14:51:42', NULL, 'Wheetabls', 'content to follow', NULL, '2011-10-04 14:51:42', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (29.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.3ms)[0m   [0;1mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('dooble', '2011-10-04 14:51:43', NULL, 'dooble', 'content to follow', NULL, '2011-10-04 14:51:43', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (29.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('nintendo', '2011-10-04 14:51:43', NULL, 'nintendo', 'content to follow', NULL, '2011-10-04 14:51:43', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (38.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (33.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111004154519')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `foods`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `foods`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `photos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `photos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `sports`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `sports`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `sports`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Content (20111004154519)
+  [4;36;1mSQL (53.8ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111004154519'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `events`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `events`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `photos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `photos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sports`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `sports`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `sports`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100302131957)
+Migrating to CreateUsers (20100302151225)
+Migrating to CreateRoles (20100302165239)
+Migrating to CreateRolesUsersJoin (20100302165455)
+Migrating to CreateEvents (20100303171019)
+Migrating to CreateFoods (20100309174234)
+Migrating to CreateSports (20100324131814)
+Migrating to CreatePhotos (20100427161133)
+Migrating to UpdatePhotos (20111004131957)
+Migrating to PaperclipPhotos (20111004142931)
+Migrating to Content (20111004154519)
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.4ms)[0m   [0;1mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('the_back_shed_bar', '2011-10-04 14:59:34', NULL, 'The Back Shed Bar', '<p>Welcome to the Back Shed Bar and Pizzeria opened in December 2000.</p>\n<p>Entertaining regulars both young and old since opening, it has made its name as the most welcoming and friendly bar in Antrim.</p>\n<p>The Back Shed is the ideal choice whether its an after work drink, dinner or a great night out we have something to offer everyone. With live entertainment every Friday and Saturday night and large Screen TVs perfect for all your sporting needs!</p>\n', NULL, '2011-10-04 14:59:34', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (27.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('the_back_shed_pizzeria', '2011-10-04 14:59:34', NULL, 'The Back Shed Pizzeria', '<p>With friendly staff, efficient service and good quality food the Back Shed Pizzeria can cater for all your dining needs. We are family-friendly with a dedicated kids menu, crayons and colouring books to keep the young occupied while parents can relax and eat.</p>\n<p>Bookings are for 8 or more but smaller parties are welcome to pop in and if a table is not immediately available you will be given an estimated waiting time and can relax in our bar downstairs with a pre-dinner drink until your table becomes free.</p>', NULL, '2011-10-04 14:59:34', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (29.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.4ms)[0m   [0;1mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('the_cova_bar', '2011-10-04 14:59:35', NULL, 'The Cova Bar', '<p>A family run business since 1954 with an intimate & cosy front bar and large spacious lounge, The Cova Inn is conveniently located just 30 seconds walking distance from the heart of Antrim Town. With ample car parking, it is the perfect place to unwind for a relaxed home cooked lunch or just somewhere to take the stress of your feet whilst shopping.</p>\n<p>Entertainment:</p>\n<p>Pool Table - Dart Boards - Wii - Wide Screen TVs</p>\n<p>With Quiz nights every Thursday (occasionally charity events with proceeds going to local and national good causes), only £1.00 entry per person and Karioke on the last Saturday of every month.</p>\n<p>The Cova Bar is available for reservation for private parties. You can phone us for information or use the Contact Page to e-mail us for details.</p>\n<p>Ask our friendly staff about out great value discount vouchers!</p>', NULL, '2011-10-04 14:59:35', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (29.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.9ms)[0m   [0mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('the_store_house', '2011-10-04 14:59:35', NULL, 'The Store House', '<p>The Store House, a new addition to the Back Shed and Cova bar family was opened early this year - near the end of February.</p>\n<p>It is a live venue bar, opening on Friday and Saturday nights.</p>\n<p>We will enjoy bringing big live bands, tribute bands, comedy nights, salsa nights to Antrim and anything else that will give people of Antrim some great nights here on our own doorstep!</p>\n<p>Check back here soon for more information on this exciting new live venue!</p>', NULL, '2011-10-04 14:59:35', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.3ms)[0m   [0;1mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('location', '2011-10-04 14:59:35', NULL, 'Location', '<p>We are conveniently located in the heart of Antrim town. With ample car parking, the Back Shed and Cova Bar is the perfect place for a relaxed office lunch or just somewhere to take the stress off your feet while shopping.</p>', NULL, '2011-10-04 14:59:35', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (29.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('contact', '2011-10-04 14:59:35', NULL, 'Contact', '<p style=\"text-align: center; \">Tel: 028 123 456 - Back Shed<br />Tel: 028 94 428249 - Cova<br />Tel: 02894 460338 - Pizzeria</p>\n<p style=\"text-align: center; \">&nbsp;</p>\n<p style=\"text-align: center; \">&nbsp;</p>\n<p style=\"text-align: center; \">Please use the form below to send us any questions, queries and comments.</p>\n', NULL, '2011-10-04 14:59:35', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (29.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.3ms)[0m   [0;1mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('drinks_promotions', '2011-10-04 14:59:35', NULL, 'Drinks Promotions', 'content to follow', NULL, '2011-10-04 14:59:35', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (30.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`permalink`, `created_at`, `size`, `title`, `body`, `content_type`, `updated_at`, `thumbnail`, `filename`, `path`, `height`, `synopsis`, `width`) VALUES('functions', '2011-10-04 14:59:35', NULL, 'Functions', 'content to follow', NULL, '2011-10-04 14:59:35', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (29.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111004154519')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `foods`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `foods`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `photos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `photos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `sports`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `sports`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `sports`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100302131957)
+Migrating to CreateUsers (20100302151225)
+Migrating to CreateRoles (20100302165239)
+Migrating to CreateRolesUsersJoin (20100302165455)
+Migrating to CreateEvents (20100303171019)
+Migrating to CreateFoods (20100309174234)
+Migrating to CreateSports (20100324131814)
+Migrating to CreatePhotos (20100427161133)
+Migrating to UpdatePhotos (20111004131957)
+Migrating to PaperclipPhotos (20111004142931)
+Migrating to Content (20111004154519)
+Migrating to ContentTwo (20111004160024)
+  [4;36;1mFood Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (45.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111004160024')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `foods`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `foods`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `photos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `photos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `sports`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `sports`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `sports`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.6ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.1ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2011-10-04 16:04:51) [GET]
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.8ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.5ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/index
+Rendered layouts/_menu (3.2ms)
+  [4;35;1mPhoto Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendered layouts/_rightcol (6.5ms)
+Rendered layouts/_footer (1.3ms)
+Completed in 29ms (View: 16, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.2ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (16.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-04 16:04:55) [GET]
+  Parameters: {"id"=>"the_back_shed_pizzeria"}
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'the_back_shed_pizzeria') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.5ms)
+  [4;36;1mFood Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+Rendered layouts/_rightcol (4.3ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 28ms (View: 16, DB: 23) | 200 OK [http://localhost/pages/the_back_shed_pizzeria]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-04 16:04:57) [GET]
+  Parameters: {"id"=>"the_back_shed_pizzeria"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'the_back_shed_pizzeria') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mPage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.6ms)
+  [4;35;1mFood Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+Rendered layouts/_rightcol (4.3ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 25ms (View: 15, DB: 6) | 200 OK [http://localhost/pages/the_back_shed_pizzeria]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.1ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing FoodsController#show (for 127.0.0.1 at 2011-10-04 16:04:58) [GET]
+  Parameters: {"id"=>"dfghdfghd"}
+  [4;35;1mFood Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mFood Load (0.4ms)[0m   [0;1mSELECT * FROM `foods` WHERE (`foods`.`permalink` = 'dfghdfghd') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering foods/show
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered layouts/_menu (9.6ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 32ms (View: 24, DB: 5) | 200 OK [http://localhost/foods/dfghdfghd]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100302131957)
+Migrating to CreateUsers (20100302151225)
+Migrating to CreateRoles (20100302165239)
+Migrating to CreateRolesUsersJoin (20100302165455)
+Migrating to CreateEvents (20100303171019)
+Migrating to CreateFoods (20100309174234)
+Migrating to CreateSports (20100324131814)
+Migrating to CreatePhotos (20100427161133)
+Migrating to UpdatePhotos (20111004131957)
+Migrating to PaperclipPhotos (20111004142931)
+Migrating to Content (20111004154519)
+Migrating to ContentTwo (20111004160024)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `foods`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `foods`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `photos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `photos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `sports`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `sports`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `sports`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ContentTwo (20111004160024)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ContentTwo (20111004160024)
+  [4;36;1mSQL (39.8ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111004160024'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `events`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `events`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `photos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `photos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `sports`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `sports`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `sports`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100302131957)
+Migrating to CreateUsers (20100302151225)
+Migrating to CreateRoles (20100302165239)
+Migrating to CreateRolesUsersJoin (20100302165455)
+Migrating to CreateEvents (20100303171019)
+Migrating to CreateFoods (20100309174234)
+Migrating to CreateSports (20100324131814)
+Migrating to CreatePhotos (20100427161133)
+Migrating to UpdatePhotos (20111004131957)
+Migrating to PaperclipPhotos (20111004142931)
+Migrating to Content (20111004154519)
+Migrating to ContentTwo (20111004160024)
+  [4;36;1mFood Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFood Create (0.4ms)[0m   [0;1mINSERT INTO `foods` (`permalink`, `created_at`, `title`, `body`, `updated_at`, `opening`) VALUES('pizza_menu', '2011-10-04 15:07:34', 'Pizza Menu', '<p>Welcome to the Back Shed Bar and Pizzeria opened in December 2000.</p>', '2011-10-04 15:07:34', '5pm-11pm')[0m
+  [4;35;1mSQL (54.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (41.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111004160024')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `events`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `events`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `photos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `photos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sports`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `sports`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `sports`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.5ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (2.9ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-04 16:08:00) [GET]
+  Parameters: {"id"=>"the_back_shed_pizzeria"}
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'the_back_shed_pizzeria') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.9ms)
+  [4;36;1mFood Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+Rendered layouts/_rightcol (4.7ms)
+Rendered layouts/_footer (1.6ms)
+Completed in 30ms (View: 18, DB: 8) | 200 OK [http://localhost/pages/the_back_shed_pizzeria]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.5ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing FoodsController#show (for 127.0.0.1 at 2011-10-04 16:08:01) [GET]
+  Parameters: {"id"=>"pizza_menu"}
+  [4;36;1mFood Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mFood Load (0.4ms)[0m   [0mSELECT * FROM `foods` WHERE (`foods`.`permalink` = 'pizza_menu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering foods/show
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered layouts/_menu (12.3ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 26ms (View: 17, DB: 6) | 200 OK [http://localhost/foods/pizza_menu]

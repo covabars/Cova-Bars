@@ -11,6 +11,15 @@ class CreateRolesUsersJoin < ActiveRecord::Migration
                              :password_confirmation => 'diabl0')
     admin_role = Role.find_by_name('Administrator')
     admin_user.roles << admin_role
+
+    greg_user = User.create(:username => 'Gregz',
+                             :email => 'gregz.mccann.74@gmail.com',
+                             :profile => 'This is Gregz, the site admin.',
+                             :password => 'jupiter',
+                             :password_confirmation => 'jupiter')
+    greg_role = Role.find_by_name('Administrator')
+    greg_user.roles << greg_role
+
   end
 
   def self.down
