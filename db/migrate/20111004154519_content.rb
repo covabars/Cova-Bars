@@ -9,7 +9,7 @@ class Content < ActiveRecord::Migration
     Page.create(:title => 'The Cova Bar', :permalink => 'the_cova_bar', :body => '<p>A family run business since 1954 with an intimate &amp; cosy front bar and large spacious lounge, The Cova Inn is conveniently located just 30 seconds walking distance from the heart of Antrim Town. With ample car parking, it is the perfect place to unwind for a relaxed home cooked lunch or just somewhere to take the stress of your feet whilst shopping.</p>
 <p>Entertainment:</p>
 <p>Pool Table - Dart Boards - Wii - Wide Screen TVs</p>
-<p>With Quiz nights every Thursday (occasionally charity events with proceeds going to local and national good causes), only £1.00 entry per person and Karioke on the last Saturday of every month.</p>
+<p>With Quiz nights every Thursday (occasionally charity events with proceeds going to local and national good causes), only &pound;1.00 entry per person and Karioke on the last Saturday of every month.</p>
 <p>The Cova Bar is available for reservation for private parties. You can phone us for information or use the Contact Page to e-mail us for details.</p>
 <p>Ask our friendly staff about out great value discount vouchers!</p>')
     Page.create(:title => 'The Store House', :permalink => 'the_store_house', :body => '<p>The Store House, a new addition to the Back Shed and Cova bar family was opened early this year - near the end of February.</p>
