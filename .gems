@@ -1,4 +1,4 @@
 rails --version 2.3.5
 activesupport --version 2.3.5
 activerecord --version 2.3.5
-paperclip --version 2.3.11
+paperclip --version 2.4
