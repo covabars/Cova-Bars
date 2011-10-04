@@ -16,6 +16,7 @@ This will go and get all the gem dependencies and you should hopefully have a wo
 * I've upgraded the Rails version to 2.3.11 and added in Bundler which makes the gem dependency management way easier (checkout the Gemfile).
 * Created the app on Heroku at http://cova-bars.heroku.com/ under the No More Art Heroku account.
 * I've sent you a pull request to get my code changes on Github.
+* You'll need to get the `heroku` command setup on your machine so you can do `git push heroku` to deploy stuff.
 
 = Issues
 
