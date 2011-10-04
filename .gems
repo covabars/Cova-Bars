@@ -1,3 +1,5 @@
 pg
 paperclip --version 2.4.2
 rails --version 2.3.5
+activesupport --version 2.3.5
+activerecord --version 2.3.5
