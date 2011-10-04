@@ -1,0 +1,50 @@
+<%
+$page_title = "Photo Gallery"
+%>
+<%= render :partial => 'layouts/header' %>
+
+<link rel="stylesheet" href="/prettyPhoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<script src="/prettyPhoto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+
+	<% if flash[:notice] -%>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end -%>
+	<% if flash[:error] -%>
+		<div id="error"><%= flash[:error] %></div>
+	<% end -%>
+	<%= yield %>
+
+<% else %>
+
+		<div class="header viewall">
+			<div class="logo">
+				<a href="/"><img src="/images/bruxelleslogo.png" title="Bruxelles Homepage" alt="bruxelleslogo" width="443" height="147"/></a>
+			</div><!-- end logo -->
+
+		<div class="boxcontainer">
+			<div class="bigboxtop"></div>
+			<div class="bigboxcontent">
+	<%= yield %>
+			</div><!-- end bigboxcontent -->
+			<div class="bigboxbottom"></div>
+		</div><!-- end box container -->
+	</div><!-- end header -->
+
+	<div class="boxcontainer">
+		<%= render :partial => 'layouts/pageheader' %>
+	</div><!-- end box container -->
+
+<% end %>
+
+<script type="text/javascript" charset="utf-8">
+
+$(document).ready(function(){
+	$(".gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded'});
+});
+
+</script>
+
+
+<%= render :partial => 'layouts/footer' %>

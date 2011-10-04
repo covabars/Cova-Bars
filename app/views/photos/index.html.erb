@@ -1,0 +1,13 @@
+<div id="gallery-container">
+
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+  <p><%= link_to 'Upload a new photo', new_photo_path %></p>
+<% end %>
+
+<%= render :partial => 'photos/page_links' %>
+
+<ul id="photos" class="gallery clearfix">
+  <%= render :partial => 'photos/photo', :collection => @photos %>
+</ul>
+
+</div><!-- end gallery-container -->

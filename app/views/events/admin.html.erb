@@ -1,0 +1,26 @@
+<h2>&nbsp;</h2>
+<h2>Manage Events</h2>
+
+<p><%= link_to 'Create New Event', new_event_path %></p>
+
+<% if @events_pages.page_count > 1 %>
+  <p class="pagination">Pages: <strong>
+    <%= pagination_links @events_pages, :params => params %>
+  </strong></p>
+<% end %>
+
+<table>
+<% @events.each do |event| %>
+	<tr>
+		<td><%= event.event_date.strftime("%d/%m/%Y") %></td>
+		<td> - </td>
+		<td><strong><%= event.title %></strong></td>
+		<td> &nbsp; </td>
+		<td>[<%= link_to 'View', event_url(event) %>]</td>
+		<td> - </td>
+		<td>[<%= link_to 'Edit', edit_event_path(event) %>]</td>
+		<td> - </td>
+		<td>[<%= link_to 'Delete', event_path(event), :method => :delete, :confirm => 'Are you sure you wish to delete this event?' %>]</td>
+	</tr>
+<% end %>
+</table>

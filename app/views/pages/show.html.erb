@@ -1,0 +1,125 @@
+<% if @page.id == 5 %>
+
+    <p>&nbsp;</p>
+
+		<%= @page.body %>
+
+		<div>
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAkR5LH1vioN1lufZ6lMTfHRSgSSoA_PcsWOLLcwneIliwxhZCJxQNwOemzbKDfRhYxXa2XiCHMHIvbg" type="text/javascript"></script> 
+<div id="side_bar"></div>
+<div id="map" style="width: 670px; height: 350px"></div> 
+<script type="text/javascript"> 
+    //<![CDATA[
+ 
+    if (GBrowserIsCompatible()) {
+      // this variable will collect the html which will eventualkly be placed in the side_bar
+      var side_bar_html = "";
+    
+      // arrays to hold copies of the markers used by the side_bar
+      // because the function closure trick doesnt work there
+      var gmarkers = [];
+      var i = 0;
+ 
+ 
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        // save the info we need to use later for the side_bar
+        gmarkers[i] = marker;
+        // add a line to the side_bar html
+        side_bar_html += '<a href="javascript:myclick(' + i + ')">' + name + '</a><br><br>';
+        i++;
+        return marker;
+      }
+ 
+ 
+      // This function picks up the click and opens the corresponding info window
+      function myclick(i) {
+        GEvent.trigger(gmarkers[i], "click");
+      }
+ 
+ 
+      // create the map
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng( 54.713234,-6.219595), 15);
+ 
+ 
+      // Read the data from XML file.xml
+      var request = GXmlHttp.create();
+      request.open("GET", "venues.xml", true);
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          var xmlDoc = GXml.parse(request.responseText);
+          // obtain the array of markers and loop through it
+          var markers = xmlDoc.documentElement.getElementsByTagName("marker");
+          
+          for (var i = 0; i < markers.length; i++) {
+            // obtain the attribues of each marker
+            var lat = parseFloat(markers[i].getAttribute("lat"));
+            var lng = parseFloat(markers[i].getAttribute("lng"));
+            var point = new GLatLng(lat,lng);
+            var html = markers[i].getAttribute("html");
+            var label = markers[i].getAttribute("label");
+            // create the marker
+            var marker = createMarker(point,label,html);
+            map.addOverlay(marker);
+          }
+          // put the assembled side_bar_html contents into the side_bar div
+          document.getElementById("side_bar").innerHTML = side_bar_html;
+        }
+      }
+      request.send(null);
+    }
+ 
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+    
+ 
+    //]]>
+    </script>
+		</div>
+	
+<% elsif @page.id == 6 %>
+
+		<% form_for :email, :url => { :controller => 'pages', :action => 'send_mail' } do |f| %>
+
+    <p>&nbsp;</p>
+
+		<%= @page.body %>
+
+		<table border="0">
+		<tr>
+		<th><%= f.label :name, "Name:" %></th>
+		<td><%= f.text_field :name, :size => 25 %></td>
+    </tr>		
+		<tr>
+		<th><%= f.label :emailaddress, "E-mail:" %></th>
+		<td><%= f.text_field :emailaddress, :size => 25 %></td>
+		<tr>
+		<th><%= f.label :phonenumber, "Phone Number:" %></th>
+		<td><%= f.text_field :phonenumber, :size => 15 %></td>
+		<tr>
+		<th valign="top"><%= f.label :comments, "Question/comment:" %></th>
+		<td><%= f.text_area :comments, :rows => 7, :cols => 25 %></td>
+		<tr>
+		<th></th>
+		<td><input type="submit" value="Submit" /></td>
+		</tr>
+		</table>
+		
+		<% end %>
+
+<% else %>
+
+    <h1>&nbsp;</h1> 
+		<h1><%= @page.title %></h1> 
+		<%= @page.body %>
+
+<% end %>

@@ -1,0 +1,53 @@
+<% if @page.id == 2 or @page.id == 3 or @page.id == 4 %>
+	<div class="boxcontainer-underimages">
+<% if @page.id == 3 or @page.id == 4 %>
+		<div class="boxcontainer-center">
+<% end %>
+			<div class="box">
+				<div class="boxtop"></div>
+				<div class="boxcontent">
+					<center><a href="<%= $page_link %>/events" title="Events in <%= $page_title %>"><img src="/images/events.jpg" alt="Events in <%= $page_title %>" width="176" height="133"/></a></center>
+					<h3><a href="<%= $page_link %>/events" title="Events in <%= $page_title %>">Events</a></h3>
+					<ul>
+					<% @boxevents.each do |boxevent| -%>
+					  <% if boxevent.page_id == @page.id %>
+						<li><p><%= boxevent.event_date.strftime("%d/%m/%Y") %> - <%= boxevent.title %></p></li>
+					  <% end %>
+					<% end -%>
+					</ul>
+				</div><!-- end boxcontent -->
+				<div class="boxbottom"></div>
+			</div><!-- end box -->
+<% if @page.id == 2 %>
+			<div class="box">
+				<div class="boxtop"></div>
+				<div class="boxcontent">
+					<center><a href="/sports" title="Sport at Bruxelles"><img src="/images/sport.jpg" alt="Sport at Bruxelles" width="176" height="133"/></a></center>
+					<h3><a href="/sports" title="View Sports at Bruxelles">Sports</a></h3>
+					<ul>
+					<% @boxsports.each do |sport| -%>
+						<li><p><%= sport.event_date.strftime("%d/%m/%Y") %> - <%= sport.title %></p></li>
+					<% end -%>
+					</ul>
+				</div><!-- end boxcontent -->
+				<div class="boxbottom"></div>
+			</div><!-- end box -->
+<% end %>
+			<div class="box">
+				<div class="boxtop"></div>
+				<div class="boxcontent">
+					<center><a href="/pages/5-food" title="Food at Bruxelles"><img src="/images/food.jpg" alt="Food at Bruxelles" width="176" height="133"/></a></center>
+					<h3><a href="/pages/5-food" title="View Food Menus">Food</a></h3>
+					<ul>
+					<li><p>View Menu's available at Bruxelles.</p></li>
+					</ul>
+				</div><!-- end boxcontent -->
+				<div class="boxbottom"></div>
+			</div><!-- end box -->
+<% if @page.id == 3 or @page.id == 4 %>
+		</div><!-- end box container center -->
+<% end %>
+	</div><!-- end box container  under images-->
+<% end %>
+
+

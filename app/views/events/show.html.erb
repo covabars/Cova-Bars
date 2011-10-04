@@ -1,0 +1,18 @@
+<h2><%= @event.title %></h2>
+
+<% if @event.page %>
+  <p class="venue">
+    Venue: <%= link_to @event.page.title, page_events_path(@event.page) %>
+  </p>
+<% end %>
+
+<p>
+  <%= @event.event_date.strftime("%d/%m/%Y") %><br />
+  <div><%= @event.body %></div>
+</p>
+
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+	<p><%= link_to 'Back to event list', admin_events_url %></p>
+<% else %>
+	<p><%= link_to 'Back to event list', events_url %></p>
+<% end %>

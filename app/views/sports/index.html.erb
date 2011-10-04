@@ -1,0 +1,51 @@
+<% if @page %>
+<div class="barlistings">
+<% content_for :head do %>
+  <%= auto_discovery_link_tag %>
+<% end %>
+
+	<h3>sports in <%= @page.title %></h3>
+
+	<% if @sports_pages.page_count > 1 %>
+	  <p class="pagination">Pages: <strong>
+	    <%= pagination_links @sports_pages, :params => params %>
+	  </strong></p>
+	<% end %>
+
+	<ul>
+	<% for sport in @sports -%>
+	    <li><%= sport.sport_date.strftime("%d/%m/%Y") %> - <%= link_to sport.title, sport_url(sport) %></li>
+	<% end -%>
+	</ul>
+
+</div>
+<% else %>
+
+<h3>Sports in All Bars</h3>
+<br />
+
+<% 1.upto(4) { |i| %>
+<div class="viewallcontainer">
+<%
+	case i
+	  when 1
+	    %><h2>The Back Shed Bar</h2><%
+	  when 3
+	    %><h2>The Cova Bar</h2><%
+	  when 4
+	    %><h2>The Store House</h2><%
+	end
+%>
+	<ul>
+	<% for sport in @sports -%>
+	    <% if sport.page_id == i and sport.page_id != 2 %>
+	    <li><%= sport.sport_date.strftime("%d/%m/%Y") %> - <%= link_to sport.title, sport_url(sport) %></li>
+		<% end %>    
+	<% end -%>
+	</ul>
+</div>
+<% }
+%>
+
+
+<% end %>

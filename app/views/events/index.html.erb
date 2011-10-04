@@ -1,0 +1,51 @@
+<% if @page %>
+<div class="barlistings">
+<% content_for :head do %>
+  <%= auto_discovery_link_tag %>
+<% end %>
+
+	<h3>Events in <%= @page.title %></h3>
+
+	<% if @events_pages.page_count > 1 %>
+	  <p class="pagination">Pages: <strong>
+	    <%= pagination_links @events_pages, :params => params %>
+	  </strong></p>
+	<% end %>
+
+	<ul>
+	<% for event in @events -%>
+	    <li><%= event.event_date.strftime("%d/%m/%Y") %> - <%= link_to event.title, event_url(event) %></li>
+	<% end -%>
+	</ul>
+
+</div>
+<% else %>
+
+<h3>Events in All Bars</h3>
+<br />
+
+<% 1.upto(4) { |i| %>
+<div class="viewallcontainer">
+<%
+	case i
+	  when 1
+	    %><h2>The Back Shed Bar</h2><%
+	  when 3
+	    %><h2>The Cova Bar</h2><%
+	  when 4
+	    %><h2>The Store House</h2><%
+	end
+%>
+	<ul>
+	<% for event in @events -%>
+	    <% if event.page_id == i and event.page_id != 2 %>
+	    <li><%= event.event_date.strftime("%d/%m/%Y") %> - <%= link_to event.title, event_url(event) %></li>
+		<% end %>    
+	<% end -%>
+	</ul>
+</div>
+<% }
+%>
+
+
+<% end %>

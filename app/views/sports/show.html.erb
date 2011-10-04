@@ -1,0 +1,17 @@
+<h2><%= @sport.title %></h2>
+
+<% if @sport.page %>
+  <p class="venue">
+    Venue: <%= link_to @sport.page.title, page_sports_path(@sport.page) %>
+  </p>
+<% end %>
+
+<p>
+  <%= @sport.event_date.strftime("%d/%m/%Y") %><br />
+  <div><%= @sport.body %></div>
+</p>
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+	<p><%= link_to 'Back to sport list', admin_sports_url %></p>
+<% else %>
+	<p><%= link_to 'Back to sport list', sports_url %></p>
+<% end %>

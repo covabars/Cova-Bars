@@ -1,0 +1,30 @@
+<h2>Edit Your Account</h2>
+
+<p><%= link_to 'Show my profile', user_path(@user) %></p>
+
+<%= error_messages_for :user %>
+
+<% form_for :user,
+            :url => user_url(@user),
+            :html => { :method => :put } do |f| -%>
+
+<p>Username:<br /><%= f.text_field :username, :size => 60 %></p>
+<p>Email:<br /><%= f.text_field :email, :size => 60 %></p>
+<p>Password:<br /><%= f.password_field :password, :size => 60 %></p>
+<p>Password Confirmation:<br /><%= f.password_field :password_confirmation, :size => 60 %></p>
+
+<p>Profile:<br /><%= f.text_area :profile, :rows => 6, :cols => 60 %></p>
+<script type="text/javascript">
+		CKEDITOR.replace( 'user[profile]',
+		{
+			filebrowserBrowseUrl : '/ckfinder/ckfinder.html',
+			filebrowserImageBrowseUrl : '/ckfinder/ckfinder.html?Type=Images',
+			filebrowserFlashBrowseUrl : '/ckfinder/ckfinder.html?Type=Flash',
+			filebrowserUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+			filebrowserImageUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+			filebrowserFlashUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+		});
+
+</script>
+<%= submit_tag 'Save' %>
+<% end -%>

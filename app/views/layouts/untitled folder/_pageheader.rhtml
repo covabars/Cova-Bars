@@ -1,0 +1,13 @@
+	<% @boxpages.each do |page| -%>
+		<div class="box">
+			<div class="boxtop"></div>
+			<div class="boxcontent">
+				<center>
+					<%= link_to image_tag(page.public_filename), page_path(page), "title" => page.title %>
+				</center>
+				<h3><%= link_to page.title, page_path(page) %></h3>
+				<p><%= page.synopsis %></p>
+			</div><!-- end boxcontent -->
+			<div class="boxbottom"></div>
+		</div><!-- end box -->
+	<% end -%>

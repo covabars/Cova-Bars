@@ -1,0 +1,26 @@
+<!-- ****************************************************************************************************************************** -->
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+</body>
+</html>
+<% else %>
+		<div class="subnav">
+<p>
+<%= link_to 'Home', index_url %>
+<% @pages.each do |page| -%>
+	<% if page.id > 1 %>
+		<%= link_to page.title, page_path(page) %>
+	<% end %>
+<% end -%>
+<%= link_to 'Gallery', photos_path %>
+<%= link_to 'View All Events', events_path %>
+<br /><%= link_to 'Login', :controller => 'account', :action => 'login' %>
+</p>
+		</div><!-- end subnav -->
+		<div class="footer">
+			<p>All imagery, data and intellectual property &copy; Bruxelles | <a href="http://www.nomoreart.com" title="No More Art Website">Web Design by No More Art</a></p>
+		</div><!-- end footer -->
+	</div><!-- end wrapper -->
+</div><!-- end container -->
+</body>
+</html>
+<% end %>

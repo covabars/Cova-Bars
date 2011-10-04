@@ -1,0 +1,12 @@
+<h2>All Menus</h2>
+
+<!--<p><%= link_to 'Create new menu', new_food_url %></p>-->
+
+<ul>
+<% @foods.each do |food| -%>
+	<li>[ <%= link_to 'edit', edit_food_url(food) %>
+	| <%= link_to 'delete', food_url(food), :method => :delete, :confirm => 'Are you sure?' %> ]
+	: <%= link_to food.title, food_path(food) %>
+	</li>
+<% end -%>
+</ul>

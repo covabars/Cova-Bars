@@ -1,0 +1,14 @@
+<h2>Upload a new photo</h2>
+
+<%= error_messages_for :photos %>
+
+<% form_for (:photo,
+             :url => photos_path,
+             :html => { :multipart => true }) do |f| %>
+  <p>Select a photo to upload</p>
+  <p>Title:<br /><%= f.text_field 'title' %></p>
+  <p>Photo:<br /><%= f.file_field 'uploaded_data' %></p>
+  <p>
+    <%= submit_tag 'Upload Photo' %> or <%= link_to 'cancel', admin_photos_path %>
+  </p>
+<% end %>

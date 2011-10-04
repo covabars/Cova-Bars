@@ -1,0 +1,39 @@
+<%
+$page_title = "a page"
+%>
+<%= render :partial => 'layouts/header' %>
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+	<% if flash[:notice] -%>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end -%>
+	<% if flash[:error] -%>
+		<div id="error"><%= flash[:error] %></div>
+	<% end -%>
+	<%= yield %>
+<% else %>
+		<div class="header viewall">
+			<div class="logo">
+				<a href="/"><img src="/images/bruxelleslogo.png" title="Bruxelles Homepage" alt="bruxelleslogo" width="443" height="147"/></a>
+			</div><!-- end logo -->
+
+			<div class="sidenav">
+				<ul>
+					<li><a href="/pages/5-food"><img src="/images/foodbtn.png" title="Food at Bruxelles" alt="xmasmenubtn" width="220" height="32"/></a></li>
+				</ul>
+			</div><!-- end side nav -->
+
+		<div class="boxcontainer">
+			<div class="bigboxtop"></div>
+			<div class="bigboxcontent">
+	<%= yield %>
+			</div><!-- end bigboxcontent -->
+			<div class="bigboxbottom"></div>
+		</div><!-- end box container -->
+	</div><!-- end header -->
+
+	<div class="boxcontainer">
+		<%= render :partial => 'layouts/pageheader' %>
+	</div><!-- end box container -->
+
+<% end %>
+<%= render :partial => 'layouts/footer' %>

@@ -1,0 +1,21 @@
+<h2>Manage Sports</h2>
+
+<p><%= link_to 'Add a New Sporting Event', new_sport_path %></p>
+
+<% if @sports_pages.page_count > 1 %>
+  <p class="pagination">Pages: <strong>
+    <%= pagination_links @sports_pages, :params => params %>
+  </strong></p>
+<% end %>
+
+<br />
+<ul>
+<% @sports.each do |sport| %>
+  <li>
+    <%= sport.event_date.strftime("%d/%m/%Y") %> - <%= link_to sport.title, sport_url(sport) %>
+    [<%= link_to 'Edit', edit_sport_path(sport) %>]
+    [<%= link_to 'Delete', sport_path(sport), :method => :delete, :confirm => 'Are you sure you wish to delete this sport?' %>]
+
+  </li>
+<% end %>
+</ul>

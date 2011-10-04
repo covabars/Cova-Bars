@@ -1,0 +1,75 @@
+<%
+$page_title = @page.title
+$page_link = page_path(@page)
+$page_identifier = @page.id
+%>
+<%= render :partial => 'layouts/header' %>
+<% if is_logged_in? and logged_in_user and logged_in_user.has_role?('administrator') %>
+	<% if flash[:notice] -%>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end -%>
+	<% if flash[:error] -%>
+		<div id="error"><%= flash[:error] %></div>
+	<% end -%>
+	<%= yield %>
+<% else %>
+		<div class="header<%= @page.outputstyle_name %>">
+			<div class="logo">
+				<a href="/"><img src="/images/bruxelleslogo.png" title="Bruxelles Homepage" alt="bruxelleslogo" width="443" height="147"/></a>
+			</div><!-- end logo -->
+<%
+
+if @page.id > 0 and @page.id < 5
+%>
+			<div class="sidenav">
+				<ul>
+					<li><%= @page.outputlink_image %></li>
+				</ul>
+			</div><!-- end side nav -->
+<%
+end
+
+if @page.id > 0 and @page.id < 5
+	if @page.id == 1 %>
+	<div id="button-statue">
+		<a href="/pages/7-statue_history"><img src="/images/newstatuebutton.png" alt="newstatuebutton" width="361" height="87"/></a>
+	</div><!-- end button-statue -->
+	<div class="boxcontainer-underimages">
+		<%= render :partial => 'layouts/pageheader' %>
+	</div><!-- end box container under images-->
+<% 	else %>
+	<%= render :partial => 'layouts/venueheader' %>
+<% 	end %>
+	</div><!-- end header -->
+
+	<div class="leftcolumn">
+	<% if flash[:notice] -%>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end -%>
+	<% if flash[:error] -%>
+		<div id="error"><%= flash[:error] %></div>
+	<% end -%>
+	<%= yield %>
+	</div><!-- end left column -->
+	<%= render :partial => 'layouts/venuefooter' %>
+<%
+else
+%>
+		<div class="boxcontainer">
+			<div class="bigboxtop"></div>
+			<div class="bigboxcontent">
+	<%= yield %>
+			</div><!-- end bigboxcontent -->
+			<div class="bigboxbottom"></div>
+		</div><!-- end box container -->
+	</div><!-- end header -->
+
+	<div class="boxcontainer">
+		<%= render :partial => 'layouts/pageheader' %>
+	</div><!-- end box container -->
+
+<%
+end
+%>
+<% end %>
+<%= render :partial => 'layouts/footer' %>

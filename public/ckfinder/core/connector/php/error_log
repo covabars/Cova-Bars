@@ -1,0 +1,5 @@
+[23-Jun-2010 14:50:22] PHP Parse error:  syntax error, unexpected ':' in /mnt/www/bruxelle/railsapp/public/ckfinder/config.php on line 37
+[23-Jun-2010 14:50:42] PHP Parse error:  syntax error, unexpected ':' in /mnt/www/bruxelle/railsapp/public/ckfinder/config.php on line 37
+[23-Jun-2010 14:51:45] PHP Parse error:  syntax error, unexpected ':' in /mnt/www/bruxelle/railsapp/public/ckfinder/config.php on line 37
+[23-Jun-2010 14:52:26] PHP Parse error:  syntax error, unexpected ':' in /mnt/www/bruxelle/railsapp/public/ckfinder/config.php on line 37
+[24-Jun-2010 07:19:57] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 6400 bytes) in /mnt/www/bruxelle/railsapp/public/ckfinder/core/connector/php/php5/CommandHandler/Thumbnail.php on line 239
