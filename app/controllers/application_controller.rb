@@ -13,18 +13,23 @@ class ApplicationController < ActionController::Base
   def initialize
     super
 
-    @menupages = Page.find(:all, 
+    @menupages = Page.find(:all,
                            :conditions => "id IN (2,3,4,7,8)")
     @foods = Food.find(:all)
-    @rcevents = Event.find(:all, 
+    @rcevents = Event.find(:all,
                            :limit => 3,
                            :order => 'event_date ASC',
                            :conditions => "event_date >= DATE(NOW())")
-    @rcsports = Sport.find(:all, 
+    @rcsports = Sport.find(:all,
                             :limit => 3,
                             :order => 'event_date ASC',
                             :conditions => "event_date >= DATE(NOW())")
-    @rcphoto = Photo.find(:first, :order => 'RAND()')
+
+    if (RAILS_ENV.to_sym == :production)
+      @rcphoto = Photo.find(:first, :order => 'random()')
+    else
+      @rcphoto = Photo.find(:first, :order => 'RAND()')
+    end
 
   end
 
