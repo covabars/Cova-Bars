@@ -3,9 +3,10 @@ if @page.id == 1 or @page.id == 3 or @page.id == 4
 # ============================================================================================= #
 %>
 		<div id="right"> 
+<% if @rcphoto %>
 		  <p align="center"><strong><%= link_to 'Gallery', photos_path %></strong></p> 
-			<p align="center">
-<%= link_to image_tag(@rcphoto.photo.url(:thumb)), photo_path(@rcphoto),"title" => @rcphoto.title %></p> 
+			<p align="center"><%= link_to image_tag(@rcphoto.photo.url(:thumb)), photo_path(@rcphoto),"title" => @rcphoto.title %></p> 
+<% end %>
 			<p align="center"><strong><%= link_to 'Events', events_path %></strong></p>
       <p style="font-weight: normal; text-align: center;">
 <% @pageevents.each do |event| -%>
@@ -25,13 +26,9 @@ if @page.id == 1 or @page.id == 3 or @page.id == 4
 
 elsif @page.id == 2 %>
 		<div id="right"> 
+<% if @rcphoto %>
 		  <p align="center"><strong><%= link_to 'Gallery', photos_path %></strong></p> 
-			<p align="center">
-<%# link_to image_tag(@rcphoto.public_filename, :size => "200x200"),
-   #           @rcphoto.public_filename(),
-    #          "title" => @rcphoto.title, 
-     #         :rel => "prettyPhoto[gallery]"             
-%></p> 
+<% end %>
 			<p align="center"><strong>Menus</strong></p> 
       <p style="font-weight: normal; text-align: center;">
 <% @foods.each do |food| -%>

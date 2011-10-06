@@ -18385,3 +18385,476 @@ Rendering foods/show
 Rendered layouts/_menu (12.3ms)
 Rendered layouts/_footer (1.5ms)
 Completed in 26ms (View: 17, DB: 6) | 200 OK [http://localhost/foods/pizza_menu]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.7ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.4ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2011-10-06 16:17:07) [GET]
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/index
+Rendered layouts/_menu (31.3ms)
+  [4;35;1mPhoto Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendered layouts/_rightcol (183.2ms)
+Rendered layouts/_footer (15.9ms)
+Completed in 381ms (View: 340, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.1ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2011-10-06 16:24:51) [GET]
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/index
+Rendered layouts/_menu (3.4ms)
+  [4;35;1mPhoto Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendered layouts/_rightcol (7.0ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 28ms (View: 17, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.1ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing AccountController#login (for 127.0.0.1 at 2011-10-06 16:24:55) [GET]
+Rendering template within layouts/application
+Rendering account/login
+  [4;35;1mPage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered layouts/_menu (8.8ms)
+Rendered layouts/_footer (1.3ms)
+Completed in 43ms (View: 38, DB: 3) | 200 OK [http://localhost/account/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.1ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing AccountController#authenticate (for 127.0.0.1 at 2011-10-06 16:24:57) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"VRkP5kMWRUPy+w8WJOma/zw3zaRdYCJN9YV9CGb3D4M=", "user"=>{"password"=>"diabl0", "email"=>"chris@nomoreart.co.uk"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`enabled` = 1 AND `users`.`email` = 'chris@nomoreart.co.uk' AND `users`.`hashed_password` = 'a273b77ef8b476fb56a04bef37637a68144df8563e0fa6b86e8cb66acfca727e') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://localhost:3000/pages/admin
+Completed in 68ms (DB: 4) | 302 Found [http://localhost/account/authenticate]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.1ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#admin (for 127.0.0.1 at 2011-10-06 16:24:57) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'Administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+  [4;35;1mPage Load (0.7ms)[0m   [0mSELECT * FROM `pages` [0m
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/admin
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+Rendered layouts/_menu (7.8ms)
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Rendered layouts/_rightcol (6.5ms)
+Rendered layouts/_footer (1.6ms)
+Completed in 184ms (View: 150, DB: 10) | 200 OK [http://localhost/pages/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-10-06 16:25:01) [GET]
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+Rendered photos/_page_links (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+Rendered photos/_photo (12.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+Rendered layouts/_menu (6.1ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 80ms (View: 69, DB: 7) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.1ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2011-10-06 16:25:04) [DELETE]
+  Parameters: {"authenticity_token"=>"VRkP5kMWRUPy+w8WJOma/zw3zaRdYCJN9YV9CGb3D4M=", "id"=>"1"}
+  [4;36;1mPhoto Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+[paperclip] Scheduling attachments for deletion.
+  [4;35;1mPhoto Destroy (0.4ms)[0m   [0mDELETE FROM `photos` WHERE `id` = 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /home/chris/cova/public/system/photos/1/original/IMG_20110315_172043.jpg
+[paperclip] deleting /home/chris/cova/public/system/photos/1/thumb/IMG_20110315_172043.jpg
+[paperclip] deleting /home/chris/cova/public/system/photos/1/medium/IMG_20110315_172043.jpg
+  [4;36;1mSQL (57.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed in 80ms (DB: 62) | 302 Found [http://localhost/photos/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.5ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-10-06 16:25:04) [GET]
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+Rendered photos/_page_links (0.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = 'administrator') AND (`roles_users`.user_id = 1 ) LIMIT 1[0m
+Rendered layouts/_menu (6.4ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 123ms (View: 113, DB: 7) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing AccountController#logout (for 127.0.0.1 at 2011-10-06 16:25:06) [POST]
+  Parameters: {"authenticity_token"=>"VRkP5kMWRUPy+w8WJOma/zw3zaRdYCJN9YV9CGb3D4M="}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 2) | 302 Found [http://localhost/account/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.2ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2011-10-06 16:25:06) [GET]
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/index
+Rendered layouts/_menu (3.2ms)
+
+ActionView::TemplateError (undefined method `photo' for nil:NilClass) on line #8 of app/views/layouts/_rightcol.rhtml:
+5: 		<div id="right"> 
+6: 		  <p align="center"><strong><%= link_to 'Gallery', photos_path %></strong></p> 
+7: 			<p align="center">
+8: <%= link_to image_tag(@rcphoto.photo.url(:thumb)), photo_path(@rcphoto),"title" => @rcphoto.title %></p> 
+9: 			<p align="center"><strong><%= link_to 'Events', events_path %></strong></p>
+10:       <p style="font-weight: normal; text-align: center;">
+11: <% @pageevents.each do |event| -%>
+
+    /usr/lib/ruby/1.8/active_support/whiny_nil.rb:52:in `method_missing'
+    app/views/layouts/_rightcol.rhtml:8:in `_run_rhtml_app47views47layouts47_rightcol46rhtml_locals_object_rightcol'
+    /usr/lib/ruby/1.8/action_view/renderable.rb:34:in `send'
+    /usr/lib/ruby/1.8/action_view/renderable.rb:34:in `render'
+    /usr/lib/ruby/1.8/action_view/base.rb:306:in `with_template'
+    /usr/lib/ruby/1.8/action_view/renderable.rb:30:in `render'
+    /usr/lib/ruby/1.8/action_view/renderable_partial.rb:20:in `render'
+    /usr/lib/ruby/1.8/action_controller/benchmarking.rb:26:in `benchmark'
+    /usr/lib/ruby/1.8/action_controller/benchmarking.rb:26:in `benchmark'
+    /usr/lib/ruby/1.8/action_view/renderable_partial.rb:19:in `render'
+    /usr/lib/ruby/1.8/action_view/template.rb:205:in `render_template'
+    /usr/lib/ruby/1.8/action_view/renderable_partial.rb:44:in `render_partial'
+    /usr/lib/ruby/1.8/action_view/partials.rb:184:in `render_partial'
+    /usr/lib/ruby/1.8/action_view/base.rb:267:in `render'
+    app/views/layouts/pages.rhtml:44:in `_run_rhtml_app47views47layouts47pages46rhtml'
+    /usr/lib/ruby/1.8/action_view/renderable.rb:34:in `send'
+    /usr/lib/ruby/1.8/action_view/renderable.rb:34:in `render'
+    /usr/lib/ruby/1.8/action_view/base.rb:306:in `with_template'
+    /usr/lib/ruby/1.8/action_view/renderable.rb:30:in `render'
+    /usr/lib/ruby/1.8/action_view/template.rb:205:in `render_template'
+    /usr/lib/ruby/1.8/action_view/base.rb:265:in `render'
+    /usr/lib/ruby/1.8/action_view/base.rb:352:in `_render_with_layout'
+    /usr/lib/ruby/1.8/action_view/base.rb:262:in `render'
+    /usr/lib/ruby/1.8/action_controller/base.rb:1250:in `render_for_file'
+    /usr/lib/ruby/1.8/action_controller/base.rb:945:in `render_without_benchmark'
+    /usr/lib/ruby/1.8/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/action_controller/base.rb:1326:in `default_render'
+    /usr/lib/ruby/1.8/action_controller/base.rb:1332:in `perform_action_without_filters'
+    /usr/lib/ruby/1.8/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/1.8/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/1.8/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /usr/lib/ruby/1.8/action_controller/flash.rb:146:in `perform_action'
+    /usr/lib/ruby/1.8/action_controller/base.rb:532:in `send'
+    /usr/lib/ruby/1.8/action_controller/base.rb:532:in `process_without_filters'
+    /usr/lib/ruby/1.8/action_controller/filters.rb:606:in `process'
+    /usr/lib/ruby/1.8/action_controller/base.rb:391:in `process'
+    /usr/lib/ruby/1.8/action_controller/base.rb:386:in `call'
+    /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:437:in `call'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:87:in `dispatch'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:121:in `_call'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+    /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+    /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+    /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/1.8/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/1.8/rack/handler/mongrel.rb:67:in `process'
+    /usr/lib/ruby/1.8/rack/handler/mongrel.rb:38:in `run'
+
+Rendered rescues/_trace (52.6ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.1ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2011-10-06 16:25:54) [GET]
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM `sports` WHERE (page_id = 1 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/index
+Rendered layouts/_menu (3.2ms)
+Rendered layouts/_rightcol (3.1ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 29ms (View: 19, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;35;1mFood Load (0.2ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-06 16:26:22) [GET]
+  Parameters: {"id"=>"the_back_shed_pizzeria"}
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'the_back_shed_pizzeria') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM `sports` WHERE (page_id = 2 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.2ms)
+  [4;36;1mFood Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+Rendered layouts/_rightcol (6.7ms)
+Rendered layouts/_footer (1.6ms)
+Completed in 41ms (View: 30, DB: 6) | 200 OK [http://localhost/pages/the_back_shed_pizzeria]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.1ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-06 16:26:22) [GET]
+  Parameters: {"id"=>"the_cova_bar"}
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'the_cova_bar') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mPage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 3 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 3 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.5ms)
+Rendered layouts/_rightcol (0.4ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 23ms (View: 12, DB: 5) | 200 OK [http://localhost/pages/the_cova_bar]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.5ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-06 16:26:23) [GET]
+  Parameters: {"id"=>"the_store_house"}
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'the_store_house') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 4 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.5ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 4 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.5ms)
+Rendered layouts/_rightcol (0.4ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 22ms (View: 11, DB: 5) | 200 OK [http://localhost/pages/the_store_house]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.1ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-06 16:26:24) [GET]
+  Parameters: {"id"=>"drinks_promotions"}
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'drinks_promotions') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mPage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 7 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 7 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.3ms)
+Rendered layouts/_rightcol (0.1ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 20ms (View: 11, DB: 5) | 200 OK [http://localhost/pages/drinks_promotions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-06 16:26:24) [GET]
+  Parameters: {"id"=>"functions"}
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'functions') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 8 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 8 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.2ms)
+Rendered layouts/_rightcol (0.2ms)
+Rendered layouts/_footer (1.3ms)
+Completed in 20ms (View: 11, DB: 5) | 200 OK [http://localhost/pages/functions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /home/chris/cova/app/controllers/application_controller.rb:9)
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (id IN (2,3,4,7,8)) [0m
+  [4;36;1mFood Load (0.2ms)[0m   [0;1mSELECT * FROM `foods` [0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.5ms)[0m   [0;1mSELECT * FROM `sports` WHERE (event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM `photos` ORDER BY RAND() LIMIT 1[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2011-10-06 16:28:55) [GET]
+  Parameters: {"id"=>"functions"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`permalink` = 'functions') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `foods` [0m
+  [4;36;1mPage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (page_id = 8 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM `sports` WHERE (page_id = 8 AND event_date >= DATE(NOW())) ORDER BY event_date ASC LIMIT 3[0m
+Rendering template within layouts/pages
+Rendering pages/show
+Rendered layouts/_menu (3.3ms)
+Rendered layouts/_rightcol (2.9ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 29ms (View: 19, DB: 5) | 200 OK [http://localhost/pages/functions]
